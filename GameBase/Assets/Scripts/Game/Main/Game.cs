@@ -19,6 +19,7 @@ public class Game : MonoBehaviour
         DontDestroyOnLoad(this);
 
         Console = new Console(Instantiate(Resources.Load<GameObject>("Interface/Console")).GetComponent<IConsoleGUI>());
+        Application.logMessageReceived += Console.OnDebugEntry;
 
         GameObj = this;
     }
