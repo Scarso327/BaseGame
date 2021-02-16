@@ -25,7 +25,7 @@ public class Game : MonoBehaviour
 
     private void Update()
     {
-        if (GameObj != null)
+        if (GameObj == null)
             return;
 
         Console.Update();
